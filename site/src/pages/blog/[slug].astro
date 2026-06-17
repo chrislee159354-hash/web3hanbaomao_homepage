@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, description, category, date: pubDate } = post.data;
+const { Content } = await post.render();
+
+// 分类中文名映射
+const categoryNames: Record<string, string> = {
+  ai: 'AI与杠杆',
+  web3: 'Web3思考',
+  'first-principles': '第一性原理',
+  'ops-basics': 'Web3运营入门',
+  'data-analysis': '数据分析实战',
+  'good-ops': '什么是好的运营',
+  interview: '面试题库',
+};
+const catName = categoryNames[category] || category;
+---
+
+<BaseLayout title={title} description={description} ogType="article">
+  <div class="pt-28 pb-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <!-- 面包屑 -->
+      <div class="flex items-center gap-2 text-sm text-slate-500 mb-10">
+        <a href="/" class="hover:text-white transition-colors">首页</a>
+        <span>/</span>
+        <span class="text-slate-400">{catName}</span>
+      </div>
+
+      <!-- 文章头 -->
+      <div class="mb-12">
+        <span class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-full mb-4">{catName}</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">{title}</h1>
+        <p class="text-slate-400 text-lg leading-relaxed">{description}</p>
+        <p class="text-slate-600 text-sm mt-4">{pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
+
+      <!-- 正文 -->
+      <article class="prose prose-invert prose-slate max-w-none
+        prose-headings:text-white
+        prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:font-semibold
+        prose-p:text-slate-300 prose-p:leading-relaxed
+        prose-strong:text-white
+        prose-img:rounded-2xl
+        prose-a:text-blue-400
+        prose-li:text-slate-300
+        prose-blockquote:border-blue-500 prose-blockquote:text-slate-400
+      ">
+        <Content />
+      </article>
+
+      <!-- 返回 -->
+      <div class="mt-16 pt-8 border-t border-white/5">
+        <a href="/" class="text-sm text-slate-500 hover:text-white transition-colors">&larr; 返回首页</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

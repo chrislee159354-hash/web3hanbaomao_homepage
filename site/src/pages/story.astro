@@ -1,5 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const getPosts = (cat: string) => allPosts.filter(p => p.data.category === cat);
+const basicsPosts = getPosts('ops-basics');
+const dataPosts = getPosts('data-analysis');
+const goodOpsPosts = getPosts('good-ops');
 ---
 
 <BaseLayout
@@ -18,7 +27,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="mb-14 text-center md:text-left">
       <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">运营能力思考 <span class="text-blue-500">.</span> <span class="text-base font-semibold text-slate-500">(Operation Insights)</span></h1>
       <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
-        一个优秀的Web3运营的自我修养
+        一个优秀的Web3运营的自我修养。文章持续更新。
       </p>
     </div>
 
@@ -31,11 +40,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 7v6h-6"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-3">Web3 运营入门 <span class="text-sm font-normal text-slate-500 block mt-1">Web3 Operations Basics</span></h3>
-        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
-          拆解加密行业独特的运营逻辑与增长路径。
-        </p>
-        <a href="https://www.notion.so/Web3-2d834d7cc4e980aea07cfb2bb6acd38d?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">阅读思考 &rarr;</a>
+        <h3 class="text-2xl font-bold text-white mb-1">Web3 运营入门</h3>
+        <p class="text-sm text-slate-500 mb-6">Web3 Operations Basics</p>
+
+        {basicsPosts.length === 0 ? (
+          <p class="text-slate-600 text-sm italic mb-8 flex-1">还没有文章，写第一篇？</p>
+        ) : (
+          <ul class="space-y-3 mb-8 flex-1">
+            {basicsPosts.map(post => (
+              <li>
+                <a href={`/blog/${post.slug}`} class="block text-sm group/link">
+                  <span class="text-slate-300 group-hover/link:text-blue-400 transition-colors leading-snug">{post.data.title}</span>
+                  <span class="text-slate-600 text-xs mt-0.5 block">{post.data.date.toLocaleDateString('zh-CN')}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <a href="/blog" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-blue-500/10 hover:border-blue-500/30 transition-all mt-auto">查看全部 &rarr;</a>
       </div>
 
       <!-- 数据分析实战 -->
@@ -49,14 +72,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M16 16V13"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-3">数据分析实战 <span class="text-sm font-normal text-slate-500 block mt-1">Data-driven Operations</span></h3>
-        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
-          如何用数据驱动决策，从噪声中寻找真实的增长线索。
-        </p>
-        <a href="https://www.notion.so/2d834d7cc4e98082a001fd96466e19f3?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">阅读思考 &rarr;</a>
+        <h3 class="text-2xl font-bold text-white mb-1">数据分析实战</h3>
+        <p class="text-sm text-slate-500 mb-6">Data-driven Operations</p>
+
+        {dataPosts.length === 0 ? (
+          <p class="text-slate-600 text-sm italic mb-8 flex-1">还没有文章，写第一篇？</p>
+        ) : (
+          <ul class="space-y-3 mb-8 flex-1">
+            {dataPosts.map(post => (
+              <li>
+                <a href={`/blog/${post.slug}`} class="block text-sm group/link">
+                  <span class="text-slate-300 group-hover/link:text-purple-400 transition-colors leading-snug">{post.data.title}</span>
+                  <span class="text-slate-600 text-xs mt-0.5 block">{post.data.date.toLocaleDateString('zh-CN')}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <a href="/blog" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all mt-auto">查看全部 &rarr;</a>
       </div>
 
-      <!-- 什么是好的运营？ -->
+      <!-- 什么是好的运营 -->
       <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
         <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
           <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
@@ -64,11 +101,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01"></path>
           </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-3">什么是好的运营？ <span class="text-sm font-normal text-slate-500 block mt-1">What Makes Great Ops</span></h3>
-        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
-          回归本质，探讨个体与社区、产品之间的深度链接。
-        </p>
-        <a href="https://www.notion.so/2d834d7cc4e9806c850acccad43b2bfc?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all">阅读思考 &rarr;</a>
+        <h3 class="text-2xl font-bold text-white mb-1">什么是好的运营？</h3>
+        <p class="text-sm text-slate-500 mb-6">What Makes Great Ops</p>
+
+        {goodOpsPosts.length === 0 ? (
+          <p class="text-slate-600 text-sm italic mb-8 flex-1">还没有文章，写第一篇？</p>
+        ) : (
+          <ul class="space-y-3 mb-8 flex-1">
+            {goodOpsPosts.map(post => (
+              <li>
+                <a href={`/blog/${post.slug}`} class="block text-sm group/link">
+                  <span class="text-slate-300 group-hover/link:text-emerald-400 transition-colors leading-snug">{post.data.title}</span>
+                  <span class="text-slate-600 text-xs mt-0.5 block">{post.data.date.toLocaleDateString('zh-CN')}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <a href="/blog" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all mt-auto">查看全部 &rarr;</a>
       </div>
     </div>
 
