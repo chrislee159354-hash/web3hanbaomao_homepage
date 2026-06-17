@@ -148,6 +148,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hen-xihuan-dixi-agent.md": {
+	id: "hen-xihuan-dixi-agent.md";
+  slug: "hen-xihuan-dixi-agent";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"shulian-ai-bubeicai.md": {
+	id: "shulian-ai-bubeicai.md";
+  slug: "shulian-ai-bubeicai";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 "projects": {
 "example.md": {
