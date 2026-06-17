@@ -1,0 +1,103 @@
+---
+// BaseLayout.astro - 全局布局，包含 SEO 标签和 nav/footer
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  ogType?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/images/profile_web3hanbaomao.jpg',
+  ogType = 'website',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Web3汉堡猫</title>
+  <meta name="description" content={description} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={`${title} | Web3汉堡猫`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.site).href} />
+  <meta property="og:url" content={canonicalURL.href} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:site_name" content="Web3汉堡猫" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | Web3汉堡猫`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(image, Astro.site).href} />
+
+  <!-- JSON-LD 结构化数据 -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Web3汉堡猫',
+    url: Astro.site?.href,
+    image: new URL('/images/profile_web3hanbaomao.jpg', Astro.site).href,
+    description: '全球 Top5 Web3 交易所运营 | 前云计算产品经理 | Crypto x AI',
+    sameAs: [
+      'https://x.com/Web3hanbaomao',
+      'https://xhslink.com/m/7s9WLtS0fTA',
+    ],
+    jobTitle: 'Web3 交易所运营',
+    knowsAbout: ['Web3', 'Crypto', 'AI', '跨境电商', '生产力系统'],
+  })} />
+
+  <link rel="canonical" href={canonicalURL.href} />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #0b0f1a; }
+  </style>
+</head>
+
+<body class="text-slate-100 antialiased selection:bg-blue-500/30">
+  <!-- 固定背景 -->
+  <div class="fixed top-0 left-0 w-full h-full z-[-1]"
+       style="background: url('/images/bg.jpg') no-repeat center center; background-size: cover; opacity: 0.25;">
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="fixed w-full bg-darkBg/60 backdrop-blur-xl z-40 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="text-xl font-bold tracking-tight text-white hover:text-blue-400 transition-colors">
+          Web3汉堡猫<span class="text-blue-500">.</span>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+          <a href="/" class="hover:text-blue-400 transition-colors">首页</a>
+          <a href="/#projects" class="hover:text-blue-400 transition-colors">核心项目</a>
+          <a href="/connect" class="flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+            <span>联系我</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <slot />
+
+  <!-- 页脚 -->
+  <footer class="py-12 text-center border-t border-white/5">
+    <p class="text-slate-600 text-sm tracking-widest font-medium uppercase">&copy; {new Date().getFullYear()} Web3汉堡猫. Built with Crypto &amp; AI.</p>
+  </footer>
+
+  <!-- 微信弹窗脚本 -->
+  <script>
+    function showWX() { document.getElementById('wxModal').style.display = "block"; document.body.style.overflow = "hidden"; }
+    function hideWX() { document.getElementById('wxModal').style.display = "none"; document.body.style.overflow = "auto"; }
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运营能力思考 | Web3汉堡猫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f1a',
+                        cardBg: 'rgba(30, 41, 59, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0f1a; font-family: 'Inter', sans-serif; color: #f1f5f9; }
+        .fixed-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: url('images/bg.jpg') no-repeat center center; background-size: cover; opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen relative flex flex-col items-center pb-20">
+
+    <div class="fixed-bg"></div>
+
+    <div class="w-full max-w-5xl px-6 py-16 relative z-10">
+        
+        <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 group text-sm font-medium">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            返回首页
+        </a>
+
+        <div class="mb-14 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">运营能力思考 <span class="text-blue-500">.</span> <span class="text-base font-semibold text-slate-500">(Operation Insights)</span></h1>
+            <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
+                一个优秀的Web3运营的自我修养
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 7-9"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7v6h-6"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Web3 运营入门 <span class="text-sm font-normal text-slate-500 block mt-1">Web3 Operations Basics</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+                    拆解加密行业独特的运营逻辑与增长路径。
+                </p>
+                <a href="https://www.notion.so/Web3-2d834d7cc4e980aea07cfb2bb6acd38d?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">阅读思考 →</a>
+            </div>
+
+            <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-purple-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16V11"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 16V7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 16V13"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">数据分析实战 <span class="text-sm font-normal text-slate-500 block mt-1">Data-driven Operations</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+                    如何用数据驱动决策，从噪声中寻找真实的增长线索。
+                </p>
+                <a href="https://www.notion.so/2d834d7cc4e98082a001fd96466e19f3?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">阅读思考 →</a>
+            </div>
+
+            <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">什么是好的运营？ <span class="text-sm font-normal text-slate-500 block mt-1">What Makes Great Ops</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+                    回归本质，探讨个体与社区、产品之间的深度链接。
+                </p>
+                <a href="https://www.notion.so/2d834d7cc4e9806c850acccad43b2bfc?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all">阅读思考 →</a>
+            </div>
+        </div>
+
+        <div class="mt-24 text-center">
+            <p class="text-slate-500 italic mb-8">“把运营拆开看清楚，把增长做得可复制。”</p>
+            <a href="connect.html" class="inline-flex items-center gap-3 bg-white text-darkBg px-10 py-4 rounded-full font-bold hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-white/10">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                和我聊聊 (Let's Connect)
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="我的业务"
+  description="提供 AI 落地咨询与高价值数字产品。深度业务咨询 / 职业规划，闲鱼数字产品。"
+>
+
+<div class="pt-40 pb-20 px-4">
+  <div class="max-w-3xl mx-auto">
+    <a href="/" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-10 group text-sm font-medium">
+      <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      返回首页
+    </a>
+
+    <div class="mb-16">
+      <h1 class="text-4xl font-extrabold text-white mb-3 tracking-tight">我的业务 <span class="text-purple-500">.</span></h1>
+      <p class="text-slate-400 text-lg">提供 AI 落地咨询与高价值数字产品。</p>
+    </div>
+
+    <!-- 咨询 -->
+    <div class="bg-slate-900/50 backdrop-blur-md rounded-3xl border border-white/5 p-10 mb-8">
+      <h2 class="text-2xl font-bold text-white mb-2">Consulting Service</h2>
+      <p class="text-purple-400 uppercase text-sm font-bold tracking-widest mb-6">Expert 1 on 1</p>
+      <h3 class="text-xl font-bold text-white mb-4">深度业务咨询 / 职业规划</h3>
+      <p class="text-slate-400 leading-relaxed mb-8">针对 AI 落地、跨境电商增长策略或产品经理职业路径提供咨询。不讲空话，只聊可落地的实战经验。</p>
+      <div class="flex items-center gap-4">
+        <span class="text-2xl font-bold text-white">&yen;200/hour</span>
+        <a href="/connect" class="bg-purple-600 text-white px-6 py-3 rounded-full font-bold hover:bg-purple-500 transition-all">预约时间</a>
+      </div>
+    </div>
+
+    <!-- 数字产品 -->
+    <div class="bg-slate-900/50 backdrop-blur-md rounded-3xl border border-white/5 p-10 mb-8">
+      <h2 class="text-2xl font-bold text-white mb-6">Digital Products</h2>
+      <div class="space-y-5">
+        <a href="https://m.tb.cn/h.73m3xda?tk=yYCZfEuC4Ww" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
+          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">ACCA 全科通关攻略</h3>
+          <p class="text-slate-400 text-sm mb-3">全国冠军经验沉淀，拒绝无效内卷，一套资料搞定考试逻辑。</p>
+          <span class="text-purple-400 font-bold">&yen;39.99</span>
+          <span class="text-slate-500 text-xs ml-2">闲鱼购买</span>
+        </a>
+        <a href="https://m.tb.cn/h.7erab7X?tk=7IdEfEuyhb1" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
+          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">国行 iPhone 开启 AI</h3>
+          <p class="text-slate-400 text-sm mb-3">突破限制，在国行设备上低成本体验 Apple Intelligence 完整功能。</p>
+          <span class="text-purple-400 font-bold">&yen;5.99</span>
+          <span class="text-slate-500 text-xs ml-2">立即解锁</span>
+        </a>
+        <a href="https://m.tb.cn/h.7erYIwG?tk=9g5TfEuzxw5" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
+          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">个人网站极速搭建</h3>
+          <p class="text-slate-400 text-sm mb-3">复刻同款极客风网站，打造你的互联网数字名片。</p>
+          <span class="text-purple-400 font-bold">Inquire</span>
+          <span class="text-slate-500 text-xs ml-2">查看详情</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="text-slate-500 text-sm text-center mt-8">所有数字产品均通过闲鱼平台交易，安全有保障。</p>
+  </div>
+</div>
+
+</BaseLayout>

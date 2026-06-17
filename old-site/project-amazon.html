@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目实战：亚马逊 Listing AI 处理系统 | Web3汉堡猫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f1a',
+                        cardBg: 'rgba(30, 41, 59, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0f1a; font-family: 'Inter', sans-serif; color: #f1f5f9; }
+        .fixed-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: url('images/bg.jpg') no-repeat center center; background-size: cover; opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen relative flex flex-col items-center pb-20">
+
+    <div class="fixed-bg"></div>
+
+    <div class="w-full max-w-5xl px-6 py-12 relative z-10">
+        
+        <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 group text-sm font-medium">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            返回简历首页
+        </a>
+
+        <div class="mb-16 border-b border-white/10 pb-10">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded-full uppercase tracking-wider">AI Vision System</span>
+                <span class="px-3 py-1 bg-emerald-600/20 text-emerald-400 text-xs font-bold rounded-full uppercase tracking-wider">SaaS Product</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">亚马逊 Listing AI 处理系统 v1.5.3</h1>
+            <p class="text-slate-400 text-lg leading-relaxed max-w-3xl">
+                针对跨境电商 1600+ SKU 的规模化运营需求，自研一套集成了 <strong>Gemini 2.5 多模态能力</strong>的视觉处理系统。解决传统商拍周期长（15天+）、成本高（单套500元+）的行业痛点。
+            </p>
+        </div>
+
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                <span class="w-1 h-8 bg-red-500 rounded-full"></span>
+                产品架构与功能全景
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-red-500 mb-1">10X</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold">出图效率提升</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-white mb-1">Low Cost</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold">边际制作成本</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-emerald-500 mb-1">2.5 Flash</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold">Gemini 模型驱动</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-emerald-500 mb-1">v1.5.3</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold">版本迭代次数</div>
+                </div>
+            </div>
+
+            <div class="w-full bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group mb-8 aspect-video flex items-center justify-center">
+                <img src="images/project-amazon-ui.jpg" alt="System UI" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500">
+                <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                    <svg class="w-12 h-12 text-slate-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="text-slate-500 text-sm font-mono"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-24">
+            
+            <div class="md:flex gap-12 items-start">
+                <div class="md:w-2/5">
+                    <div class="w-12 h-12 bg-red-600/20 text-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">01. 智能 A+ 页面设计引擎</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        <strong>功能逻辑：</strong> 采用“三步走”工作流。用户只需上传原材料图片并输入核心卖点，系统通过 AI 自动构思设计大纲，并一键生成符合亚马逊规范的 6 模块 A+ 页面。 
+                        <br><br>
+                        <strong>技术实现：</strong> 利用 Gemini-2.5-flash 处理视觉背景与文案的精准匹配，确保产品主体“像素级保留”的同时，生成沉浸式背景。
+                    </p>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                        <div class="text-xs text-slate-500 mb-2 font-bold uppercase">支持尺寸</div>
+                        <div class="flex gap-2 text-[10px]">
+                            <span class="px-2 py-1 bg-slate-800 rounded">970x600</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded">1464x600</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded">1500x1500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-3/5 bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group aspect-video">
+                    <img src="images/project-amazon-designer.jpg" alt="AI Designer" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                         <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:flex gap-12 items-start flex-row-reverse">
+                <div class="md:w-2/5">
+                    <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">02. 极致合规与品质重塑</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        <strong>主图生成：</strong> 系统自动移除杂乱背景，智能嵌入符合亚马逊要求的专业白底环境，支持“场景合成”后的边缘融合度实时调整。 
+                        <br><br>
+                        <strong>高清修复：</strong> 针对老款 SKU 或像素不足的原材料，通过 AI 纹理合成技术进行 4K 级重绘，确保所有图片在 200% 缩放下的清晰度。
+                    </p>
+                </div>
+                <div class="md:w-3/5 bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group aspect-video">
+                    <img src="images/project-amazon-quality.jpg" alt="Quality Tools" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                         <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:flex gap-12 items-start">
+                <div class="md:w-2/5">
+                    <div class="w-12 h-12 bg-emerald-600/20 text-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">03. 商业全链路闭环</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        <strong>文案引擎：</strong> 集成中东市场合规检测与 Compatibility 语法规则库，自动优化标题、五点描述，并直接生成可部署的 HTML 长描述。 
+                        <br><br>
+                        <strong>极速流转：</strong> 系统内置“图片上传链接”功能，支持本地图片一键转为外链，大幅减少运营人员在亚马逊后台手动传图的时间开销。 
+                    </p>
+                </div>
+                <div class="md:w-3/5 bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group aspect-video">
+                    <img src="images/project-amazon-copy.jpg" alt="Automation Tools" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                         <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="mt-24 p-10 bg-gradient-to-r from-red-950/20 to-slate-900 border border-white/5 rounded-[2rem]">
+            <h3 class="text-xl font-bold text-white mb-4">💡 为什么这个系统对业务团队至关重要？</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300">
+                <div class="flex gap-3">
+                    <svg class="w-10 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span><strong>降低运营门槛：</strong> 即使是不懂 PS、不懂文案的初级运营，也能通过系统在 10 分钟内产出专家级 Listing 页面。</span>
+                </div>
+                <div class="flex gap-3">
+                    <svg class="w-10 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span><strong>资产标准化：</strong> 将原本碎片化的设计、文案逻辑封装进系统，确保全店铺 1600+ SKU 的品牌视觉一致性。</span>
+                </div>
+                <div class="flex gap-3">
+                    <svg class="w-10 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span><strong>AI 技术的真实降本：</strong> 将 AI 从“玩具”变为“生产力工具”，每年可为单品牌节省数十万元的商拍与美工成本。</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
