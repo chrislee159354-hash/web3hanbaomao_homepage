@@ -69,4 +69,4 @@ Agent 出来混，总有些东西比能力更重要。
 
 <div class="my-10"></div>
 
-原文链接：[真的很喜欢和嫡系 Agent 聊天](https://www.xiaohongshu.com/discovery/item/6a2ff4b10000000021019922?source=webshare&xhsshare=pc_web&xsec_token=ABDiiIdnMuCqz6w-uTKPSkQW0Nt26wNKbAl9Au-DCt9RQ=&xsec_source=pc_share)
+<p style="color: #fb7185; margin-top: 0;">📕 原文：<a href="https://www.xiaohongshu.com/discovery/item/6a2ff4b10000000021019922?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABDiiIdnMuCqz6w-uTKPSkQW0Nt26wNKbAl9Au-DCt9RQ=&amp;xsec_source=pc_share" style="color: #fb7185; text-decoration: underline;">真的很喜欢和嫡系 Agent 聊天</a>（来自小红书）</p>
