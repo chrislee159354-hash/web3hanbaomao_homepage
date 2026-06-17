@@ -66,3 +66,7 @@ date: 2025-06-17
 Agent 出来混，总有些东西比能力更重要。
 
 #职场观察者 #职场日常 #嫡系 #web3 #agent #ai #领导
+
+<div class="my-10"></div>
+
+原文链接：[真的很喜欢和嫡系 Agent 聊天](https://www.xiaohongshu.com/discovery/item/6a2ff4b10000000021019922?source=webshare&xhsshare=pc_web&xsec_token=ABDiiIdnMuCqz6w-uTKPSkQW0Nt26wNKbAl9Au-DCt9RQ=&xsec_source=pc_share)
