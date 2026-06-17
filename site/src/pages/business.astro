@@ -4,59 +4,172 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="我的业务"
-  description="提供 AI 落地咨询与高价值数字产品。深度业务咨询 / 职业规划，闲鱼数字产品。"
+  description="提供 Web3 职场深度咨询、精准内推。简历帮看/内推/offer咨询、1V1 深度职业规划、运营岗位面试辅导。"
 >
 
-<div class="pt-40 pb-20 px-4">
-  <div class="max-w-3xl mx-auto">
+<div class="pt-28 pb-20 px-4">
+  <div class="max-w-4xl mx-auto">
+
     <a href="/" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-10 group text-sm font-medium">
       <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       返回首页
     </a>
 
-    <div class="mb-16">
+    <div class="mb-12">
       <h1 class="text-4xl font-extrabold text-white mb-3 tracking-tight">我的业务 <span class="text-purple-500">.</span></h1>
-      <p class="text-slate-400 text-lg">提供 AI 落地咨询与高价值数字产品。</p>
+      <p class="text-slate-400 text-lg">提供 Web3 职场深度咨询、精准内推。</p>
     </div>
 
-    <!-- 咨询 -->
-    <div class="bg-slate-900/50 backdrop-blur-md rounded-3xl border border-white/5 p-10 mb-8">
-      <h2 class="text-2xl font-bold text-white mb-2">Consulting Service</h2>
-      <p class="text-purple-400 uppercase text-sm font-bold tracking-widest mb-6">Expert 1 on 1</p>
-      <h3 class="text-xl font-bold text-white mb-4">深度业务咨询 / 职业规划</h3>
-      <p class="text-slate-400 leading-relaxed mb-8">针对 AI 落地、跨境电商增长策略或产品经理职业路径提供咨询。不讲空话，只聊可落地的实战经验。</p>
-      <div class="flex items-center gap-4">
-        <span class="text-2xl font-bold text-white">&yen;200/hour</span>
-        <a href="/connect" class="bg-purple-600 text-white px-6 py-3 rounded-full font-bold hover:bg-purple-500 transition-all">预约时间</a>
+    <!-- Consulting Service -->
+    <div class="mb-12">
+      <h2 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">Consulting Service</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 免费咨询 -->
+        <button onclick="showWX()" class="w-full relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-purple-500/30 rounded-3xl p-8 text-left hover:scale-[1.01] transition-all group shadow-2xl shadow-purple-900/10">
+          <div class="absolute top-6 right-6">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 group-hover:border-purple-500/30 transition-all">
+              <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 2v6h6"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 13H8"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 17H8"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-10 md:flex justify-between items-center gap-6">
+            <div>
+              <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-3">Expert 1 on 1</div>
+              <h3 class="text-2xl font-bold text-white mb-2">简历帮看/内推/offer 咨询</h3>
+              <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+                针对想入行、或者刚拿到 offer，对 Web3 行业现状、公司情况、简历是否符合条件不清楚的同学，提供咨询
+              </p>
+            </div>
+            <div class="mt-6 md:mt-0 flex flex-col items-end min-w-[120px]">
+              <span class="text-3xl font-bold text-white">免费</span>
+              <div class="mt-3 flex items-center gap-2 text-purple-400 text-sm font-bold group-hover:text-purple-300">
+                点击联系 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <!-- 深钻职业规划 -->
+        <button onclick="showWX()" class="w-full relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-purple-500/30 rounded-3xl p-8 text-left hover:scale-[1.01] transition-all group shadow-2xl shadow-purple-900/10">
+          <div class="absolute top-6 right-6">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 group-hover:border-purple-500/30 transition-all">
+              <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.24 7.76l-4.24 8.48-8.48 4.24 4.24-8.48z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="relative z-10 md:flex justify-between items-center gap-6">
+            <div>
+              <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-3">Expert 1 on 1</div>
+              <h3 class="text-2xl font-bold text-white mb-2">1V1 深度职业规划</h3>
+              <ul class="text-slate-400 text-sm leading-relaxed max-w-xl list-disc pl-5 space-y-2">
+                <li>Web3 招聘主力的赛道、公司、岗位情况</li>
+                <li>不同公司、岗位的薪酬分布、工作时间、压力、天花板</li>
+                <li>投递与工作中的法律风险（如何规避帮信/掩隐风险，团队筛选策略）</li>
+                <li>新人入行最常见的 3 个误区与 4 个容易踩雷的行为</li>
+                <li>不讲空话，只说最真实的职场现状</li>
+              </ul>
+            </div>
+            <div class="mt-6 md:mt-0 flex flex-col items-end min-w-[120px]">
+              <span class="text-3xl font-bold text-white">350<span class="text-sm text-slate-500 font-normal"> / 小时</span></span>
+              <div class="mt-3 flex items-center gap-2 text-purple-400 text-sm font-bold group-hover:text-purple-300">
+                预约时间 &rarr; <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </div>
+            </div>
+          </div>
+        </button>
       </div>
     </div>
 
-    <!-- 数字产品 -->
-    <div class="bg-slate-900/50 backdrop-blur-md rounded-3xl border border-white/5 p-10 mb-8">
-      <h2 class="text-2xl font-bold text-white mb-6">Digital Products</h2>
-      <div class="space-y-5">
-        <a href="https://m.tb.cn/h.73m3xda?tk=yYCZfEuC4Ww" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
-          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">ACCA 全科通关攻略</h3>
-          <p class="text-slate-400 text-sm mb-3">全国冠军经验沉淀，拒绝无效内卷，一套资料搞定考试逻辑。</p>
-          <span class="text-purple-400 font-bold">&yen;39.99</span>
-          <span class="text-slate-500 text-xs ml-2">闲鱼购买</span>
-        </a>
-        <a href="https://m.tb.cn/h.7erab7X?tk=7IdEfEuyhb1" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
-          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">国行 iPhone 开启 AI</h3>
-          <p class="text-slate-400 text-sm mb-3">突破限制，在国行设备上低成本体验 Apple Intelligence 完整功能。</p>
-          <span class="text-purple-400 font-bold">&yen;5.99</span>
-          <span class="text-slate-500 text-xs ml-2">立即解锁</span>
-        </a>
-        <a href="https://m.tb.cn/h.7erYIwG?tk=9g5TfEuzxw5" target="_blank" class="block bg-slate-800/50 rounded-2xl p-6 border border-white/5 hover:border-purple-500/30 transition-all group">
-          <h3 class="font-bold text-lg text-white mb-2 group-hover:text-purple-400 transition-colors">个人网站极速搭建</h3>
-          <p class="text-slate-400 text-sm mb-3">复刻同款极客风网站，打造你的互联网数字名片。</p>
-          <span class="text-purple-400 font-bold">Inquire</span>
-          <span class="text-slate-500 text-xs ml-2">查看详情</span>
-        </a>
+    <!-- 运营岗位面试服务 -->
+    <h2 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">运营岗位面试服务</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- 面试常见问题 -->
+      <div class="w-full relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-purple-500/30 rounded-3xl p-8 text-left hover:scale-[1.01] transition-all group shadow-2xl shadow-purple-900/10">
+        <div class="absolute top-6 right-6">
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 group-hover:border-purple-500/30 transition-all">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative z-10">
+          <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-3">Interview</div>
+          <h3 class="text-2xl font-bold text-white mb-4">运营岗位面试常见问题</h3>
+          <div class="grid grid-cols-1 gap-3">
+            <a href="https://www.notion.so/2d734d7cc4e98089bbdac935412aaa5f?source=copy_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between gap-3 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm font-semibold text-purple-300 hover:text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">
+              用户运营/活动运营
+              <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v14a2 2 0 002 2h14"></path></svg>
+            </a>
+            <a href="https://www.notion.so/2d734d7cc4e980e094eee2a3113f9b02?source=copy_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between gap-3 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm font-semibold text-purple-300 hover:text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">
+              社群运营
+              <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v14a2 2 0 002 2h14"></path></svg>
+            </a>
+            <a href="https://www.notion.so/HR-2d734d7cc4e98015ad1af3793aa8cd39?source=copy_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between gap-3 bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm font-semibold text-purple-300 hover:text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">
+              HR 必问的常规问题
+              <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0-7L10 14"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v14a2 2 0 002 2h14"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 面试辅导 -->
+      <div class="w-full relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-purple-500/30 rounded-3xl p-8 text-left hover:scale-[1.01] transition-all group shadow-2xl shadow-purple-900/10">
+        <div class="absolute top-6 right-6">
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 group-hover:border-purple-500/30 transition-all">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15l3-3m-3 3l-3-3m3 3V6"></path>
+              <circle cx="12" cy="12" r="9"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="relative z-10 md:flex justify-between items-start gap-6">
+          <div class="flex-1">
+            <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-3">Coaching</div>
+            <h3 class="text-2xl font-bold text-white mb-2">运营岗位面试辅导</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">简历/项目梳理、问题拆解、回答结构与现场模拟，按目标岗位定制。</p>
+          </div>
+          <div class="mt-6 md:mt-0 flex flex-col items-end min-w-[140px]">
+            <span class="text-3xl font-bold text-white">499<span class="text-sm text-slate-500 font-normal"> / 小时</span></span>
+            <button onclick="showWX()" class="mt-3 inline-flex items-center gap-2 text-purple-400 text-sm font-bold hover:text-purple-300 transition-colors">
+              预约时间 &rarr;
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <p class="text-slate-500 text-sm text-center mt-8">所有数字产品均通过闲鱼平台交易，安全有保障。</p>
+<!-- 微信弹窗 -->
+<div id="wxModal" class="hidden fixed z-[100] inset-0 bg-black/85 backdrop-blur-lg" style="display:none" onclick="hideWX()">
+  <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-800 p-8 rounded-[2rem] max-w-sm w-full text-center border border-white/10 shadow-2xl" onclick="event.stopPropagation()">
+    <button onclick="hideWX()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <div class="mb-6">
+      <div class="w-16 h-16 bg-purple-500/20 text-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+      </div>
+      <h3 class="font-bold text-2xl text-white">预约咨询服务</h3>
+      <p class="text-slate-400 text-sm mt-1">添加微信请备注：<span class="text-purple-400">预约咨询</span></p>
+    </div>
+    <div class="bg-white p-2 rounded-xl mb-6">
+      <img src="/images/QRcode_Web3hanbaomao.jpg" alt="WeChat QR Code" class="w-full rounded-lg" />
+    </div>
+    <div class="bg-slate-900/50 p-3 rounded-xl border border-white/5 flex items-center justify-between">
+      <span class="text-slate-400 text-sm pl-2">微信号:</span>
+      <span class="text-white font-mono font-bold select-all">Web3hanbaomao</span>
+    </div>
   </div>
 </div>
 

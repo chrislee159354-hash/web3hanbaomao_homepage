@@ -3,83 +3,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="我的 MOE"
-  description="Mixture of Experts 专家混合模型——我的底层工作逻辑。流量选题、AI多模态、系统化SOP、商业增长，四大专家模块。"
+  title="认知架构与深度思考"
+  description="我对 AI、Web3 及投资逻辑的底层拆解。内容同步自 Notion 知识库。AI与杠杆、Web3思考、第一性原理。"
 >
 
-<div class="pt-40 pb-20 px-4">
-  <div class="max-w-4xl mx-auto">
+<div class="pt-28 pb-20 px-4">
+  <div class="max-w-5xl mx-auto">
+
     <a href="/" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-10 group text-sm font-medium">
       <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       返回首页
     </a>
 
-    <h1 class="text-4xl font-extrabold text-white mb-6 tracking-tight">我的 MOE 架构 <span class="text-emerald-500">.</span></h1>
-    <p class="text-slate-400 text-lg mb-16 leading-relaxed max-w-2xl">
-      Mixture of Experts (专家混合模型) 是我的底层工作逻辑。我将不同的业务能力封装为独立的"专家模块"，根据场景动态调用，实现单兵作战的效率最大化。
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- 流量 -->
-      <div class="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 p-8 hover:border-blue-500/30 transition-all">
-        <div class="p-4 bg-blue-500/10 text-blue-400 rounded-2xl w-fit mb-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-        </div>
-        <h3 class="font-bold text-xl text-white mb-3">流量与选题专家</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">拒绝盲目铺量。基于社媒实时热点与高价值信息差进行精准选题。利用 LLM 模拟不同用户画像，打磨极致的"内容钩子 (Hook)"，实现低成本冷启动与高留存转化。</p>
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full">流量冷启动</span>
-          <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full">信息差萃取</span>
-          <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full">Hook 设计</span>
-        </div>
-      </div>
-
-      <!-- AI -->
-      <div class="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 p-8 hover:border-purple-500/30 transition-all">
-        <div class="p-4 bg-purple-500/10 text-purple-400 rounded-2xl w-fit mb-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-        </div>
-        <h3 class="font-bold text-xl text-white mb-3">AI 多模态专家</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">深度掌握 ChatGPT 与 Gemini 等前沿大模型，重构跨境电商生产流。将文案生成、数据分析及多媒体处理的周期从"天"压缩至"分钟级"，实现全链路自动化。</p>
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <span class="text-xs bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">ChatGPT</span>
-          <span class="text-xs bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">Gemini</span>
-          <span class="text-xs bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">生产力重构</span>
-        </div>
-      </div>
-
-      <!-- SOP -->
-      <div class="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 p-8 hover:border-emerald-500/30 transition-all">
-        <div class="p-4 bg-emerald-500/10 text-emerald-400 rounded-2xl w-fit mb-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path></svg>
-        </div>
-        <h3 class="font-bold text-xl text-white mb-3">系统化 SOP 专家</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">拒绝碎片化勤奋。通过自研工具（如智能装箱算法）与 AI Agent，将复杂业务流程封装为标准化 SOP。通过"人机协作"模式，将团队人效提升 300% 以上。</p>
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full">SOP 资产化</span>
-          <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full">业务逻辑工程化</span>
-          <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full">效率倍增</span>
-        </div>
-      </div>
-
-      <!-- 增长 -->
-      <div class="bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 p-8 hover:border-orange-500/30 transition-all">
-        <div class="p-4 bg-orange-500/10 text-orange-400 rounded-2xl w-fit mb-6">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-        </div>
-        <h3 class="font-bold text-xl text-white mb-3">商业增长专家</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">从财务审计的严谨逻辑出发，结合 26w+ 店铺操盘实战经验，关注数据背后的增长机会。不仅懂 AI 技术，更懂如何将 AI 转化为真实的财务利润 (ROI)。</p>
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <span class="text-xs bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full">操盘手思维</span>
-          <span class="text-xs bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full">ROI 导向</span>
-          <span class="text-xs bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full">财务逻辑</span>
-        </div>
-      </div>
+    <div class="mb-16 text-center md:text-left">
+      <h1 class="text-4xl font-extrabold text-white mb-4 tracking-tight">认知架构与深度思考 <span class="text-emerald-500">.</span> <span class="text-base font-semibold text-slate-500">(My MOE)</span></h1>
+      <p class="text-slate-400 text-lg max-w-2xl">
+        这里记录我对 AI、Web3 及投资逻辑的底层拆解。内容同步自我的 Notion 知识库。
+      </p>
     </div>
 
-    <div class="mt-16 text-center">
-      <h2 class="text-2xl text-white font-bold mb-6">想了解这些能力如何落地到你的业务？</h2>
-      <a href="/connect" class="inline-flex items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-500 transition-all">与我聊聊 (Let's Talk)</a>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- AI与杠杆 -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-purple-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col hover:-translate-y-1">
+        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 2.75a3.25 3.25 0 00-1.15 6.29c-.19.53-.3 1.1-.3 1.71 0 1.2.42 2.3 1.13 3.17-.9.73-1.48 1.85-1.48 3.08 0 2.23 1.9 4.03 4.25 4.03h1.3c2.35 0 4.25-1.8 4.25-4.03 0-1.23-.58-2.35-1.48-3.08.71-.87 1.13-1.97 1.13-3.17 0-.61-.11-1.18-.3-1.71A3.25 3.25 0 0014.5 2.75" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v2M10.5 11h3M10 18h4" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">AI与杠杆 <span class="text-sm font-normal text-slate-500 block mt-1">AI Productivity Experiments</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          利用 AI 工具链重构个体工作流。
+        </p>
+        <a href="https://www.notion.so/AI-2d834d7cc4e98015af4ce3f3ab20fb8f?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">阅读文章 &rarr;</a>
+      </div>
+
+      <!-- Web3思考 -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-amber-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col hover:-translate-y-1">
+        <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 10-14h-7l1-6z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Web3思考 <span class="text-sm font-normal text-slate-500 block mt-1">Web3 & Asset Narratives</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          探索加密时代的叙事与投资逻辑。
+        </p>
+        <a href="https://www.notion.so/Web3-2d834d7cc4e98094b6f5d42c8f9d11be?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-amber-500/10 hover:border-amber-500/30 transition-all">阅读文章 &rarr;</a>
+      </div>
+
+      <!-- 第一性原理 -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col hover:-translate-y-1">
+        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 19a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v12z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 5V3a2 2 0 012-2h6a2 2 0 012 2v16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h8M8 17h6"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">第一性原理 <span class="text-sm font-normal text-slate-500 block mt-1">First Principles Thinking</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          聚焦长期不变的价值，用第一性原理过好人生
+        </p>
+        <a href="https://www.notion.so/2d834d7cc4e98067bbaced0eba7bab78?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all">阅读文章 &rarr;</a>
+      </div>
+
+    </div>
+
+    <div class="mt-20 text-center">
+      <h2 class="text-2xl font-bold text-white mb-6">想进一步交流这些主题？</h2>
+      <a href="/connect" class="inline-flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        与我聊聊 (Let's Talk)
+      </a>
     </div>
   </div>
 </div>

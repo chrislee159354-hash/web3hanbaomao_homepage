@@ -3,89 +3,82 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="我的故事"
-  description="从审计师到 AI 操盘手——我不相信横空出世的天才。一场关于如何在深圳用系统对抗混乱、用逻辑追求增长的长期实验。"
+  title="运营能力思考"
+  description="一个优秀的Web3运营的自我修养。Web3运营入门、数据分析实战、什么是好的运营？"
 >
 
-<div class="pt-40 pb-20 px-4">
-  <div class="max-w-3xl mx-auto">
-    <a href="/" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-10 group text-sm font-medium">
+<div class="pt-28 pb-20 px-4">
+  <div class="max-w-5xl mx-auto">
+
+    <a href="/" class="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 group text-sm font-medium">
       <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       返回首页
     </a>
 
-    <h1 class="text-4xl font-extrabold text-white mb-6 tracking-tight">从审计师到 AI 操盘手 <span class="text-orange-500">.</span></h1>
-    <blockquote class="text-slate-400 text-lg italic mb-16 border-l-4 border-orange-500 pl-6">
-      "我不相信横空出世的天才。我的职业生涯，是一场关于如何在深圳这座'卷都'里，用系统对抗混乱、用逻辑追求增长的长期实验。"
-    </blockquote>
+    <div class="mb-14 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">运营能力思考 <span class="text-blue-500">.</span> <span class="text-base font-semibold text-slate-500">(Operation Insights)</span></h1>
+      <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
+        一个优秀的Web3运营的自我修养
+      </p>
+    </div>
 
-    <div class="space-y-16">
-      <!-- 审计师 -->
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">Origin: The Auditor</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Web3 运营入门 -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 7-9"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7v6h-6"></path>
+          </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">审计师的逻辑底色</h3>
-        <p class="text-slate-400 leading-relaxed">
-          在从事财务审计期间，我接受了极为严苛的逻辑训练。每一笔账目的背后都是业务的本质，这让我养成了对<strong class="text-white">数据极其敏感</strong>、对<strong class="text-white">流程近乎强迫症般追求标准化</strong>的习惯。这段经历为我后来构建"个人系统"打下了最坚实的底层代码。
+        <h3 class="text-2xl font-bold text-white mb-3">Web3 运营入门 <span class="text-sm font-normal text-slate-500 block mt-1">Web3 Operations Basics</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          拆解加密行业独特的运营逻辑与增长路径。
         </p>
+        <a href="https://www.notion.so/Web3-2d834d7cc4e980aea07cfb2bb6acd38d?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">阅读思考 &rarr;</a>
       </div>
 
-      <!-- 初入深圳 -->
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">Transition: Shenzhen Speed</span>
+      <!-- 数据分析实战 -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-purple-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16V11"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16V7"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 16V13"></path>
+          </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">初入深圳：思维重塑的阵痛</h3>
-        <p class="text-slate-400 leading-relaxed">
-          当我带着审计师追求"百分百准确"的执念来到深圳，现实给了我当头一棒。互联网不讲究完美，只讲究<strong class="text-white">"快"与"迭代"</strong>。我被迫在不确定性中重塑思维，学会了像黑客一样思考：先开枪，后瞄准，在奔跑中修正弹道。
+        <h3 class="text-2xl font-bold text-white mb-3">数据分析实战 <span class="text-sm font-normal text-slate-500 block mt-1">Data-driven Operations</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          如何用数据驱动决策，从噪声中寻找真实的增长线索。
         </p>
+        <a href="https://www.notion.so/2d834d7cc4e98082a001fd96466e19f3?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-purple-500/10 hover:border-purple-500/30 transition-all">阅读思考 &rarr;</a>
       </div>
 
-      <!-- 跨境电商 -->
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">Battle: The Operator</span>
+      <!-- 什么是好的运营？ -->
+      <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group flex flex-col">
+        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01"></path>
+          </svg>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">跨境电商的实战洗礼</h3>
-        <p class="text-slate-400 leading-relaxed">
-          这是真正的战场。我接手了 <strong class="text-white">1600+ SKU</strong> 的盘子，面对着瞬息万变的流量和库存压力。我成功带领店铺实现了 <strong class="text-white">26w+ 的月销售额</strong>，但更重要的是，我明白了：爆款或许靠运气，但<strong class="text-white">持续的盈利</strong>只能靠系统。
+        <h3 class="text-2xl font-bold text-white mb-3">什么是好的运营？ <span class="text-sm font-normal text-slate-500 block mt-1">What Makes Great Ops</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-8 flex-1">
+          回归本质，探讨个体与社区、产品之间的深度链接。
         </p>
-      </div>
-
-      <!-- 深漂日记 -->
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">Reflection: The System</span>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">《深漂日记》里的自我进化</h3>
-        <p class="text-slate-400 leading-relaxed">
-          在无数个加班后的深夜，我写下了<strong class="text-white">《深漂日记》</strong>。这些文字记录的不只是生活的琐碎，更是我对业务逻辑近乎偏执的复盘。我发现，对抗焦虑的唯一武器就是<strong class="text-white">复盘与内化</strong>。在日记里，我把复杂的业务拆解成了一个个可复用的 SOP 模块，这是我个人系统的雏形。
-        </p>
-      </div>
-
-      <!-- AI -->
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">Evolution: AI-First</span>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">AI 时代的重构与爆发</h3>
-        <p class="text-slate-400 leading-relaxed">
-          当 AI 浪潮来袭，我意识到这不是一个工具，而是一次生产力的重置。我开始尝试将 <strong class="text-white">ChatGPT、Gemini</strong> 深度接入工作流。在 X (Twitter) 的流量实验中，我验证了"AI + 个人系统"的威力。现在，我不再只是操作者，我是这套智能系统的架构师。
-        </p>
+        <a href="https://www.notion.so/2d834d7cc4e9806c850acccad43b2bfc?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all">阅读思考 &rarr;</a>
       </div>
     </div>
 
-    <div class="mt-16 flex gap-3 mb-8">
-      <span class="text-xs bg-slate-800 text-orange-400 px-4 py-2 rounded-full font-bold">#AI_First</span>
-      <span class="text-xs bg-slate-800 text-orange-400 px-4 py-2 rounded-full font-bold">#System_Thinker</span>
+    <div class="mt-24 text-center">
+      <p class="text-slate-500 italic mb-8">"把运营拆开看清楚，把增长做得可复制。"</p>
+      <a href="/connect" class="inline-flex items-center gap-3 bg-white text-darkBg px-10 py-4 rounded-full font-bold hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-white/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        和我聊聊 (Let's Connect)
+      </a>
     </div>
-
-    <blockquote class="text-slate-300 text-lg font-medium border-l-4 border-orange-500 pl-6 mb-10">
-      "与其预测未来，不如系统化地创造未来。"
-    </blockquote>
-
-    <a href="/connect" class="inline-flex items-center gap-2 bg-orange-600 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-500 transition-all">和我聊聊 (Let's Connect)</a>
   </div>
 </div>
 
